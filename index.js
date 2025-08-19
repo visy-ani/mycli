@@ -1,2 +1,16 @@
 #!/usr/bin/env node
-console.log('hello world')
+
+import { count } from './utils.js';
+
+const mycli = process.argv[2];
+
+const newmycli = {
+    content: mycli,
+    id: Date.now()
+}
+
+console.log(newmycli)
+
+(function() {
+    console.log("IIFE")
+})()
